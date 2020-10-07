@@ -8,7 +8,9 @@ class Owner
     @pets = []
   end
 
-  def species  
+  def say_species
+    @species 
+  end
 
 
 end
