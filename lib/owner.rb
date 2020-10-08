@@ -78,7 +78,8 @@ class Owner
   end 
   
   def list_pets
-    dog_num, cat_num = 0
+    dog_num = 0 
+    cat_num = 0
     Cat.all.each {|pet|
       if pet.is_a?(Cat) && pet.owner == self
         cat_num += 1
