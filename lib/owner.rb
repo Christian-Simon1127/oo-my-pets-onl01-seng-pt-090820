@@ -69,7 +69,18 @@ class Owner
   end 
   
   def sell_pets
-    
+    Cat.all.each {|pet|
+      if pet.is_a?(Cat) && pet.owner == self
+        pet.mood = "nervous"
+        pet.owner = nil
+      end
+    }
+    Dog.all.each {|pet|
+      if pet.is_a?(Dog) && pet.owner == self
+        pet.mood = "nervous"
+        pet.owner = nil
+      end
+    } 
     
     
     
