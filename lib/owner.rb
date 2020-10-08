@@ -47,10 +47,10 @@ class Owner
   end
   
   def buy_cat(name)
-    bought_cat = nil
+    bought_cat = 0
     Cat.all.each {|pet|
       if pet.is_a?(Cat) && pet.name == name
-        bought_cat = pet
+        bought_cat += 1
       end
     } 
     bought_cat
