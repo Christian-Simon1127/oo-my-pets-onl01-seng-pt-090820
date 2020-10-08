@@ -78,7 +78,18 @@ class Owner
   end 
   
   def list_pets
-    
+    dog_num, cat_num = 0
+    Cat.all.each {|pet|
+      if pet.is_a?(Cat) && pet.owner == self
+        cat_num += 1
+      end
+    }
+    Dog.all.each {|pet|
+      if pet.is_a?(Dog) && pet.owner == self
+        dog_num += 1
+      end
+    }
+    "I have #{dog_num} dog(s), and #{cat_num} cat(s)."
   end 
   
   
