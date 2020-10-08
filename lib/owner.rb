@@ -52,7 +52,17 @@ class Owner
     dog = Dog.new(name, self)
   end
   
+  def walk_dogs 
+    Dog.all.each {|pet|
+      if pet.is_a?(Dog) && pet.owner == self
+        pet.mood = "happy"
+      end
+    }
+  end
   
+  def feed_cats 
+  
+  end 
   
   
 
