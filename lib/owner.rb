@@ -1,5 +1,5 @@
 class Owner
-  attr_accessor :pets
+  attr_accessor :cats, :dogs
   attr_reader :species, :name
   @@all = []
 
@@ -50,7 +50,8 @@ class Owner
     bought_cat = 0
     Cat.all.each {|pet|
       if pet.is_a?(Cat) && pet.name == name
-        bought_cat += 1
+        bought_cat = pet
+        @cats += 1
       end
     } 
     bought_cat
