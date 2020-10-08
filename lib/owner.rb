@@ -36,7 +36,15 @@ class Owner
     all_cats
   end
   
-  
+  def dogs 
+    all_dogs = []
+    Dog.all.each {|pet|
+      if pet.is_a?(Dog) && pet.owner = self
+        all_dogs << pet
+      end
+    }
+    all_dogs
+  end
   
   
   
