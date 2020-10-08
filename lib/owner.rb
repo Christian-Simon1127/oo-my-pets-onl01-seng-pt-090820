@@ -52,7 +52,11 @@ class Owner
     end    
   end
   
-  
+  def buy_dog(dog)
+    if dog.is_a?(Dog)
+      dog.owner = self 
+    end    
+  end
   
   
   
