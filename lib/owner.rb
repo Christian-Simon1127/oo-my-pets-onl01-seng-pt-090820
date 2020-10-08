@@ -39,7 +39,7 @@ class Owner
   def dogs 
     all_dogs = []
     Dog.all.each {|pet|
-      if pet.is_a?(Dog) && pet.owner = self
+      if pet.is_a?(Dog) && pet.owner == self
         all_dogs << pet
       end
     }
