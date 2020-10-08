@@ -48,10 +48,8 @@ class Owner
     cat = Cat.new(name, self)
   end
   
-  def buy_dog(dog)
-    if dog.is_a?(Dog)
-      dog.owner = self 
-    end    
+  def buy_dog(name)
+    dog = Dog.new(name, self)
   end
   
   
