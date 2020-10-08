@@ -30,6 +30,7 @@ class Owner
     all_cats = []
     @pets.each {|pet|
       if pet.is_a?(Cat)
+        pet.owner = self
         all_cats << pet
       end
     }
