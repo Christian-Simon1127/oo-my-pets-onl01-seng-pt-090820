@@ -46,6 +46,15 @@ class Owner
     all_dogs
   end
   
+  def buy_cat(cat)
+    if cat.is_a?(Cat)
+      cat.owner = self 
+    end    
+  end
+  
+  
+  
+  
   
   
 
