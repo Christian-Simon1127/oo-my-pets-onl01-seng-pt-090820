@@ -29,7 +29,7 @@ class Owner
   def cats 
     all_cats = []
     Cat.all.each {|pet|
-      if pet.is_a?(Cat) && pet.owner = self
+      if pet.is_a?(Cat) && pet.owner == self
         all_cats << pet
       end
     }
