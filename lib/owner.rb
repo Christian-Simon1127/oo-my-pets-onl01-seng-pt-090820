@@ -1,12 +1,10 @@
 class Owner
-  attr_accessor :cats, :dogs
   attr_reader :species, :name
   @@all = []
 
   def initialize(name)
     @name = name
     @species = "human"
-    @cats, @dogs = 0
     @@all << self
   end
 
@@ -47,14 +45,8 @@ class Owner
   end
   
   def buy_cat(name)
-    bought_cat = 0
-    Cat.all.each {|pet|
-      if pet.is_a?(Cat) && pet.name == name
-        bought_cat = pet
-        @cats += 1
-      end
-    } 
-    bought_cat
+    cat = Cat.new(name)
+    cat.own
   end
   
   def buy_dog(dog)
